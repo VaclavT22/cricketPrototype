@@ -1,5 +1,6 @@
 package com.taska.java.crickets.cricketfarm.controller;
 
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
@@ -27,7 +28,9 @@ public class ProductController {
 	
 	@GetMapping
 	public List<Product> getProducts() {
-		return productRepository.findAll();
+		List<Product> products = productRepository.findAll();
+		products.sort(Comparator.comparing(Product::getId));
+		return products;
 	}
 	
 	@GetMapping("/{id}")

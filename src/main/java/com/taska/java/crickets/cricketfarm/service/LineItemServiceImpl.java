@@ -22,6 +22,7 @@ public class LineItemServiceImpl implements LineItemService {
 	@Override
 	public void updateOrderPrice(Long orderId, Long productId, int amount) {
 		Order order = orderRepository.getOne(orderId);
+		System.out.println(order.getTotalPrice());
 		if(order.getTotalPrice() == null) {
 			final BigDecimal newPrice = productRepository.getOne(productId).getPrice().multiply(new BigDecimal(amount)); 
 			order.setTotalPrice(newPrice);
@@ -29,7 +30,7 @@ public class LineItemServiceImpl implements LineItemService {
 			final BigDecimal newPrice = order.getTotalPrice().add(productRepository.getOne(productId).getPrice().multiply(new BigDecimal(amount)));
 			order.setTotalPrice(newPrice);
 		}
-		
+		System.out.println("After change: " + order.getTotalPrice());
 	}
 	
 }
