@@ -1,5 +1,6 @@
 package com.taska.java.crickets.cricketfarm.controller;
 
+import java.math.BigDecimal;
 import java.util.Comparator;
 import java.util.List;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.taska.java.crickets.cricketfarm.model.Product;
@@ -53,5 +55,30 @@ public class ProductController {
 	@DeleteMapping("/{id}")
 	public void deleteProduct(@PathVariable("id") Long id) {
 		productRepository.deleteById(id);
+	}
+	
+	@GetMapping("/likeName")
+	public List<Product> getProductsLikeName(@RequestParam(name = "productName") String productName) {
+		return productRepository.findByNameIgnoreCaseContaining(productName);
+	}
+	
+	@GetMapping("/likeAge")
+	public List<Product> getProductsLikeAge(@RequestParam String productAge) {
+		return productRepository.findByAgeIgnoreCaseContaining(productAge);
+	}
+	
+	@GetMapping("/likeVolume")
+	public List<Product> getProductsLikeVolume(@RequestParam Float productVolume) {
+		return productRepository.findByVolumeContaining(productVolume);
+	}
+	
+	@GetMapping("/likePackaging")
+	public List<Product> getProductsLikePackaging(@RequestParam String productPackaging){
+		return productRepository.findByPackagingIgnoreCaseContaining(productPackaging);
+	}
+	
+	@GetMapping("/likePrice") 
+	public List<Product> getProductsLikePrice(@RequestParam BigDecimal productPrice) {
+		return productRepository.findByPriceContaining(productPrice);
 	}
 }
