@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.taska.java.crickets.cricketfarm.model.Product;
 import com.taska.java.crickets.cricketfarm.repository.ProductRepository;
+import com.taska.java.crickets.cricketfarm.utils.NumberVerifier;
 
 @RestController
 @RequestMapping("/api/products")
@@ -27,6 +28,9 @@ public class ProductController {
 
 	@Autowired
 	private ProductRepository productRepository;
+	
+	@Autowired
+	private NumberVerifier numberVerifier;
 	
 	@GetMapping
 	public List<Product> getProducts() {
@@ -58,7 +62,7 @@ public class ProductController {
 	}
 	
 	@GetMapping("/likeName")
-	public List<Product> getProductsLikeName(@RequestParam(name = "productName") String productName) {
+	public List<Product> getProductsLikeName(@RequestParam String productName) {
 		return productRepository.findByNameIgnoreCaseContaining(productName);
 	}
 	
@@ -68,8 +72,12 @@ public class ProductController {
 	}
 	
 	@GetMapping("/likeVolume")
-	public List<Product> getProductsLikeVolume(@RequestParam Float productVolume) {
-		return productRepository.findByVolumeContaining(productVolume);
+	public List<Product> getProductsIsOfVolume(@RequestParam(name = "productVolume") String productVolumeString) {
+		Float productVolume = 0f;
+		if(numberVerifier.isAbleToParseFloat(productVolumeString)) {
+			productVolume = Float.parseFloat(productVolumeString);
+		}
+		return productRepository.findByVolumeIs(productVolume);
 	}
 	
 	@GetMapping("/likePackaging")
@@ -78,7 +86,13 @@ public class ProductController {
 	}
 	
 	@GetMapping("/likePrice") 
-	public List<Product> getProductsLikePrice(@RequestParam BigDecimal productPrice) {
-		return productRepository.findByPriceContaining(productPrice);
+	public List<Product> getProductsIsOfPrice(@RequestParam(name = "productPrice") String productPriceString) {
+		BigDecimal productPrice;
+		if(numberVerifier.isAbleToParseDecimal(productPriceString)) {
+			productPrice = new BigDecimal(productPriceString);
+		} else {
+			productPrice = new BigDecimal(0);
+		}
+		return productRepository.findByPriceIs(productPrice);
 	}
 }

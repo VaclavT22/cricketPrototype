@@ -10,7 +10,7 @@ import com.taska.java.crickets.cricketfarm.model.Product;
 public interface ProductRepository extends JpaRepository<Product, Long> {
 	List<Product> findByNameIgnoreCaseContaining(String productName);
 	List<Product> findByAgeIgnoreCaseContaining(String productAge);
-	List<Product> findByVolumeContaining(Float productVolume);
+	List<Product> findByVolumeIs(Float productVolume);
 	List<Product> findByPackagingIgnoreCaseContaining(String productPackaging);
-	List<Product> findByPriceContaining(BigDecimal productPrice);
+	List<Product> findByPriceIs(BigDecimal productPrice);
 }
