@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.taska.java.crickets.cricketfarm.model.Customer;
 import com.taska.java.crickets.cricketfarm.repository.CustomerRepository;
+import com.taska.java.crickets.cricketfarm.utils.NumberVerifier;
 
 @RestController
 @RequestMapping("/api/customers")
@@ -24,6 +26,9 @@ public class CustomerController {
 	
 	@Autowired
 	private CustomerRepository customerRepository;
+	
+	@Autowired
+	private NumberVerifier numberVerifier;
 	
 	@GetMapping
 	public List<Customer> getCustomers(){
@@ -52,4 +57,27 @@ public class CustomerController {
 		customerRepository.deleteById(id);
 	}
 
+	@GetMapping("/likeName")
+	public List<Customer> getCustomersLikeName(@RequestParam String customerName) {
+		return customerRepository.findByNameIgnoreCaseContaining(customerName);
+	}
+	
+	@GetMapping("/likeSurname")
+	public List<Customer> getCustomersLikeSurname(@RequestParam String customerSurname) {
+		return customerRepository.findBySurnameIgnoreCaseContaining(customerSurname);
+	}
+	
+	@GetMapping("/likePhone")
+	public Customer getCustomerByPhone(@RequestParam(name = "customerPhone") String customerPhoneString) {
+		Long customerPhoneNumber = 0L;
+		if(numberVerifier.isAbleToParseLong(customerPhoneString)) {
+			customerPhoneNumber = Long.parseLong(customerPhoneString);
+		}
+		return customerRepository.findByPhoneNumberIs(customerPhoneNumber);
+	}
+	
+	@GetMapping("/likeMail")
+	public List<Customer> getCustomersLikeMail(@RequestParam String customerMail) {
+		return customerRepository.findByEmailIgnoreCaseContaining(customerMail);
+	}
 }

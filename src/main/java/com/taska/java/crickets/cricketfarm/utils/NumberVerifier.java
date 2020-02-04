@@ -26,4 +26,13 @@ public class NumberVerifier {
 			return false;
 		}
 	}
+	
+	public boolean isAbleToParseLong(String toLong) {
+		try {
+			Long.parseLong(toLong);
+			return true;
+		} catch(Exception e) {
+			return false;
+		}
+	}
 }
