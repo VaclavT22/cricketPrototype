@@ -2,7 +2,6 @@ package com.taska.java.crickets.cricketfarm.controller;
 
 import java.util.List;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.taska.java.crickets.cricketfarm.model.Customer;
-import com.taska.java.crickets.cricketfarm.repository.CustomerRepository;
-import com.taska.java.crickets.cricketfarm.utils.NumberVerifier;
+import com.taska.java.crickets.cricketfarm.service.CustomerServiceModifier;
+import com.taska.java.crickets.cricketfarm.service.CustomerServiceSearcher;
 
 @RestController
 @RequestMapping("/api/customers")
@@ -25,59 +24,54 @@ import com.taska.java.crickets.cricketfarm.utils.NumberVerifier;
 public class CustomerController {
 	
 	@Autowired
-	private CustomerRepository customerRepository;
+	private CustomerServiceModifier customerServiceModifier;
 	
 	@Autowired
-	private NumberVerifier numberVerifier;
+	private CustomerServiceSearcher customerServiceSearcher;
+	
 	
 	@GetMapping
 	public List<Customer> getCustomers(){
-		return customerRepository.findAll();
+		return customerServiceSearcher.getAllCustomers();
 	}
 	
 	@PostMapping
-	public Customer createCustomer(@RequestBody final Customer customer) {
-		return customerRepository.saveAndFlush(customer);
+	public Customer addCustomer(@RequestBody final Customer customer) {
+		return customerServiceModifier.saveCustomer(customer);
 	}
 	
 	@GetMapping("/{id}")
 	public Customer getCustomer(@PathVariable("id") Long id) {
-		return customerRepository.getOne(id);
+		return customerServiceSearcher.getCustomerById(id);
 	}
 	
 	@PutMapping("/{id}")
 	public Customer updateCustomer(@RequestBody final Customer customer, @PathVariable("id") Long id) {
-		Customer existingCustomer = customerRepository.getOne(id);
-		BeanUtils.copyProperties(customer, existingCustomer, "id");
-		return customerRepository.saveAndFlush(existingCustomer);
+		return customerServiceModifier.updateCustomer(id, customer);
 	}
 	
 	@DeleteMapping("/{id}")
 	public void deleteCustomer(@PathVariable("id") Long id) {
-		customerRepository.deleteById(id);
+		customerServiceModifier.deleteCustomer(id);
 	}
 
 	@GetMapping("/likeName")
 	public List<Customer> getCustomersLikeName(@RequestParam String customerName) {
-		return customerRepository.findByNameIgnoreCaseContaining(customerName);
+		return customerServiceSearcher.getCustomersLikeName(customerName);
 	}
 	
 	@GetMapping("/likeSurname")
 	public List<Customer> getCustomersLikeSurname(@RequestParam String customerSurname) {
-		return customerRepository.findBySurnameIgnoreCaseContaining(customerSurname);
+		return customerServiceSearcher.getCustomersLikeSurname(customerSurname);
 	}
 	
 	@GetMapping("/likePhone")
-	public Customer getCustomerByPhone(@RequestParam(name = "customerPhone") String customerPhoneString) {
-		Long customerPhoneNumber = 0L;
-		if(numberVerifier.isAbleToParseLong(customerPhoneString)) {
-			customerPhoneNumber = Long.parseLong(customerPhoneString);
-		}
-		return customerRepository.findByPhoneNumberIs(customerPhoneNumber);
+	public Customer getCustomerByPhone(@RequestParam(name = "customerPhone") Long customerPhoneString) {
+		return customerServiceSearcher.getCustomerByPhone(customerPhoneString);
 	}
 	
 	@GetMapping("/likeMail")
 	public List<Customer> getCustomersLikeMail(@RequestParam String customerMail) {
-		return customerRepository.findByEmailIgnoreCaseContaining(customerMail);
+		return customerServiceSearcher.getCustomersLikeMail(customerMail);
 	}
 }

@@ -1,7 +1,7 @@
 package com.taska.java.crickets.cricketfarm.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -33,15 +33,17 @@ public class Order {
 	@JoinColumn(name = "customer_id")
 	private Customer customer;
 	
-	private Date orderDate;
+	private LocalDate orderDate;
+	
+	private LocalDate deliveryDate;
 	
 	private BigDecimal totalPrice;
 	
 	private Boolean isCompleted;
 	
-	public Order() {
-		
-	}
+	private Boolean isDelivered;
+	
+
 
 	public Long getId() {
 		return id;
@@ -67,11 +69,11 @@ public class Order {
 		return customer;
 	}
 	
-	public Date getOrderDate() {
+	public LocalDate getOrderDate() {
 		return orderDate;
 	}
 
-	public void setOrderDate(Date orderDate) {
+	public void setOrderDate(LocalDate orderDate) {
 		this.orderDate = orderDate;
 	}
 
@@ -90,7 +92,21 @@ public class Order {
 	public void setIsCompleted(Boolean isCompleted) {
 		this.isCompleted = isCompleted;
 	}
-	
-	
 
+	public LocalDate getDeliveryDate() {
+		return deliveryDate;
+	}
+
+	public void setDeliveryDate(LocalDate deliveryDate) {
+		this.deliveryDate = deliveryDate;
+	}
+
+	public Boolean getIsDelivered() {
+		return isDelivered;
+	}
+
+	public void setIsDelivered(Boolean isDelivered) {
+		this.isDelivered = isDelivered;
+	}
+	
 }

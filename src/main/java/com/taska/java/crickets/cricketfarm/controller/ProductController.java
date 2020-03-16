@@ -1,10 +1,8 @@
 package com.taska.java.crickets.cricketfarm.controller;
 
 import java.math.BigDecimal;
-import java.util.Comparator;
 import java.util.List;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,81 +16,65 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.taska.java.crickets.cricketfarm.model.Product;
-import com.taska.java.crickets.cricketfarm.repository.ProductRepository;
-import com.taska.java.crickets.cricketfarm.utils.NumberVerifier;
+import com.taska.java.crickets.cricketfarm.service.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
 @CrossOrigin(origins = "http://localhost:3000")
 public class ProductController {
 
-	@Autowired
-	private ProductRepository productRepository;
 	
 	@Autowired
-	private NumberVerifier numberVerifier;
+	private ProductService productService;
+
 	
 	@GetMapping
 	public List<Product> getProducts() {
-		List<Product> products = productRepository.findAll();
-		products.sort(Comparator.comparing(Product::getId));
-		return products;
+		return productService.getAllProducts();
 	}
 	
 	@GetMapping("/{id}")
 	public Product getProduct(@PathVariable("id") Long id) {
-		return productRepository.getOne(id);
+		return productService.getProductById(id);
 	}
 	
 	@PostMapping
 	public Product createProduct(@RequestBody final Product product) {
-		return productRepository.saveAndFlush(product);
+		return productService.saveProduct(product);
 	}
 	
 	@PutMapping("/{id}")
 	public Product updateProduct(@RequestBody final Product product, @PathVariable("id") Long id) {
-		Product existingProduct = productRepository.getOne(id);
-		BeanUtils.copyProperties(product, existingProduct, "id");
-		return productRepository.saveAndFlush(existingProduct);
+		return productService.updateProduct(id, product);
 	}
 	
 	@DeleteMapping("/{id}")
 	public void deleteProduct(@PathVariable("id") Long id) {
-		productRepository.deleteById(id);
+		productService.deleteProduct(id);
 	}
 	
 	@GetMapping("/likeName")
 	public List<Product> getProductsLikeName(@RequestParam String productName) {
-		return productRepository.findByNameIgnoreCaseContaining(productName);
+		return productService.getProductsLikeName(productName);
 	}
 	
 	@GetMapping("/likeAge")
 	public List<Product> getProductsLikeAge(@RequestParam String productAge) {
-		return productRepository.findByAgeIgnoreCaseContaining(productAge);
+		return productService.getProductsLikeAge(productAge);
 	}
 	
 	@GetMapping("/likeVolume")
-	public List<Product> getProductsIsOfVolume(@RequestParam(name = "productVolume") String productVolumeString) {
-		Float productVolume = 0f;
-		if(numberVerifier.isAbleToParseFloat(productVolumeString)) {
-			productVolume = Float.parseFloat(productVolumeString);
-		}
-		return productRepository.findByVolumeIs(productVolume);
+	public List<Product> getProductsIsOfVolume(@RequestParam Float productVolume) {
+		return productService.getProductsByVolume(productVolume);
 	}
 	
 	@GetMapping("/likePackaging")
 	public List<Product> getProductsLikePackaging(@RequestParam String productPackaging){
-		return productRepository.findByPackagingIgnoreCaseContaining(productPackaging);
+		return productService.getProductsLikePackaging(productPackaging);
 	}
 	
 	@GetMapping("/likePrice") 
-	public List<Product> getProductsIsOfPrice(@RequestParam(name = "productPrice") String productPriceString) {
-		BigDecimal productPrice;
-		if(numberVerifier.isAbleToParseDecimal(productPriceString)) {
-			productPrice = new BigDecimal(productPriceString);
-		} else {
-			productPrice = new BigDecimal(0);
-		}
-		return productRepository.findByPriceIs(productPrice);
+	public List<Product> getProductsIsOfPrice(@RequestParam(name = "productPrice") BigDecimal productPrice) {
+		return productService.getProductsByPrice(productPrice);
 	}
 }

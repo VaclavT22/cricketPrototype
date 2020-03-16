@@ -30,8 +30,10 @@ public class NumberVerifier {
 	public boolean isAbleToParseLong(String toLong) {
 		try {
 			Long.parseLong(toLong);
+			System.out.println("parsed successfully");
 			return true;
 		} catch(Exception e) {
+			System.out.println("Error parsing " + toLong);
 			return false;
 		}
 	}

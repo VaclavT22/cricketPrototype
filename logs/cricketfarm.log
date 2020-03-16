@@ -1,0 +1,221 @@
+15-03-2020 14:55:57.796 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarting - Starting CricketfarmApplication on DESKTOP-LVRVGJL with PID 2084 (C:\Users\Venous\eclipse-workspace\cricketfarm\target\classes started by Venouš in C:\Users\Venous\eclipse-workspace\cricketfarm)
+15-03-2020 14:55:57.800 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+15-03-2020 14:55:58.433 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+15-03-2020 14:55:58.518 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 79ms. Found 9 repository interfaces.
+15-03-2020 14:55:58.726 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15-03-2020 14:55:59.029 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+15-03-2020 14:55:59.035 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+15-03-2020 14:55:59.036 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+15-03-2020 14:55:59.036 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.27]
+15-03-2020 14:55:59.109 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+15-03-2020 14:55:59.110 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1274 ms
+15-03-2020 14:55:59.271 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+15-03-2020 14:55:59.358 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.4.6.Final}
+15-03-2020 14:55:59.454 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+15-03-2020 14:55:59.532 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+15-03-2020 14:55:59.588 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+15-03-2020 14:55:59.601 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+15-03-2020 14:56:00.301 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15-03-2020 14:56:00.306 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 14:56:00.979 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15-03-2020 14:56:01.125 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+15-03-2020 14:56:01.345 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+15-03-2020 14:56:01.365 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+15-03-2020 14:56:01.367 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarted - Started CricketfarmApplication in 3.917 seconds (JVM running for 4.462)
+15-03-2020 14:56:11.548 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15-03-2020 14:56:11.549 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+15-03-2020 14:56:11.556 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 7 ms
+15-03-2020 14:56:11.582 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: Order com.taska.java.crickets.cricketfarm.controller.OrderController.deliverOrder(Long,String)
+15-03-2020 14:56:11.586 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: Order com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.deliverOrder(Long,String)
+15-03-2020 14:56:11.634 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: Income com.taska.java.crickets.cricketfarm.serviceimpl.IncomeServiceImpl.generateIncome(Order)
+15-03-2020 14:56:19.045 [http-nio-8080-exec-2] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.OrderController.getOrders()
+15-03-2020 14:56:19.045 [http-nio-8080-exec-2] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.getOrders()
+15-03-2020 14:56:59.227 [http-nio-8080-exec-4] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: Order com.taska.java.crickets.cricketfarm.controller.OrderController.completeOrder(Long)
+15-03-2020 14:56:59.228 [http-nio-8080-exec-4] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: Order com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.completeOrder(Long)
+15-03-2020 14:57:10.137 [http-nio-8080-exec-3] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: Order com.taska.java.crickets.cricketfarm.controller.OrderController.completeOrder(Long)
+15-03-2020 14:57:10.138 [http-nio-8080-exec-3] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: Order com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.completeOrder(Long)
+15-03-2020 14:57:34.435 [http-nio-8080-exec-5] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.OrderController.getOrders()
+15-03-2020 14:57:34.436 [http-nio-8080-exec-5] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.getOrders()
+15-03-2020 14:58:08.276 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+15-03-2020 14:58:08.278 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+15-03-2020 14:58:08.280 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 14:58:08.282 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+15-03-2020 14:58:08.284 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+15-03-2020 19:47:26.478 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarting - Starting CricketfarmApplication on DESKTOP-LVRVGJL with PID 15632 (C:\Users\Venous\eclipse-workspace\cricketfarm\target\classes started by Venouš in C:\Users\Venous\eclipse-workspace\cricketfarm)
+15-03-2020 19:47:26.481 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+15-03-2020 19:47:26.952 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+15-03-2020 19:47:27.037 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 79ms. Found 9 repository interfaces.
+15-03-2020 19:47:27.260 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15-03-2020 19:47:27.534 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+15-03-2020 19:47:27.540 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+15-03-2020 19:47:27.541 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+15-03-2020 19:47:27.541 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.27]
+15-03-2020 19:47:27.620 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+15-03-2020 19:47:27.621 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1108 ms
+15-03-2020 19:47:27.769 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+15-03-2020 19:47:27.840 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.4.6.Final}
+15-03-2020 19:47:27.924 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+15-03-2020 19:47:27.985 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+15-03-2020 19:47:28.036 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+15-03-2020 19:47:28.046 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+15-03-2020 19:47:28.672 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15-03-2020 19:47:28.677 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 19:47:29.330 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15-03-2020 19:47:29.483 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+15-03-2020 19:47:29.837 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78e387d6, org.springframework.security.web.context.SecurityContextPersistenceFilter@1dbeedff, org.springframework.security.web.header.HeaderWriterFilter@7b332b23, org.springframework.security.web.csrf.CsrfFilter@2fa879ed, org.springframework.security.web.authentication.logout.LogoutFilter@3cb04dd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2be50bba, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2a42019a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@9147ba2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5315266, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@226e07e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42d174ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3460e4ed, org.springframework.security.web.session.SessionManagementFilter@3fd5d679, org.springframework.security.web.access.ExceptionTranslationFilter@dbc7e0a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61eab26b]
+15-03-2020 19:47:29.878 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+15-03-2020 19:47:29.892 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+15-03-2020 19:47:29.894 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarted - Started CricketfarmApplication in 3.698 seconds (JVM running for 4.17)
+15-03-2020 19:47:37.149 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15-03-2020 19:47:37.149 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+15-03-2020 19:47:37.158 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 8 ms
+15-03-2020 19:47:52.896 [http-nio-8080-exec-5] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.OrderController.getOrders()
+15-03-2020 19:47:52.901 [http-nio-8080-exec-5] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.getOrders()
+15-03-2020 19:48:00.643 [http-nio-8080-exec-6] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.CustomerController.getCustomers()
+15-03-2020 19:48:00.646 [http-nio-8080-exec-6] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.CustomerServiceSearcherImpl.getAllCustomers()
+15-03-2020 20:24:05.555 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+15-03-2020 20:24:05.557 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:24:05.560 [RMI TCP Connection(5)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:24:05.562 [RMI TCP Connection(5)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+15-03-2020 20:24:05.572 [RMI TCP Connection(5)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+15-03-2020 20:24:09.031 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarting - Starting CricketfarmApplication on DESKTOP-LVRVGJL with PID 5760 (C:\Users\Venous\eclipse-workspace\cricketfarm\target\classes started by Venouš in C:\Users\Venous\eclipse-workspace\cricketfarm)
+15-03-2020 20:24:09.034 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+15-03-2020 20:24:09.544 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+15-03-2020 20:24:09.633 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 83ms. Found 9 repository interfaces.
+15-03-2020 20:24:09.861 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15-03-2020 20:24:10.145 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+15-03-2020 20:24:10.151 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:24:10.152 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+15-03-2020 20:24:10.153 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.27]
+15-03-2020 20:24:10.233 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+15-03-2020 20:24:10.234 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1167 ms
+15-03-2020 20:24:10.385 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+15-03-2020 20:24:10.464 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.4.6.Final}
+15-03-2020 20:24:10.552 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+15-03-2020 20:24:10.612 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+15-03-2020 20:24:10.666 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+15-03-2020 20:24:10.676 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+15-03-2020 20:24:11.322 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15-03-2020 20:24:11.327 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:24:11.409 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15-03-2020 20:24:12.309 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bfa17b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@46702c26, org.springframework.security.web.header.HeaderWriterFilter@58aa5c94, org.springframework.security.web.csrf.CsrfFilter@502c2278, org.springframework.security.web.authentication.logout.LogoutFilter@485deee1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5d84e363, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@606d6d2c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52b32b70, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@625264ed, org.springframework.security.web.session.SessionManagementFilter@1d6f77d7, org.springframework.security.web.access.ExceptionTranslationFilter@23396fc0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7e8f23ad]
+15-03-2020 20:24:12.472 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:24:12.702 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:24:12.720 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+15-03-2020 20:24:12.721 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarted - Started CricketfarmApplication in 3.977 seconds (JVM running for 4.464)
+15-03-2020 20:24:33.285 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15-03-2020 20:24:33.286 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+15-03-2020 20:24:33.292 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 6 ms
+15-03-2020 20:24:54.322 [http-nio-8080-exec-3] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.OrderController.getOrders()
+15-03-2020 20:24:54.326 [http-nio-8080-exec-3] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.getOrders()
+15-03-2020 20:25:18.608 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+15-03-2020 20:25:18.610 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:25:18.612 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:25:18.614 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+15-03-2020 20:25:18.616 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+15-03-2020 20:25:22.145 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarting - Starting CricketfarmApplication on DESKTOP-LVRVGJL with PID 2748 (C:\Users\Venous\eclipse-workspace\cricketfarm\target\classes started by Venouš in C:\Users\Venous\eclipse-workspace\cricketfarm)
+15-03-2020 20:25:22.148 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+15-03-2020 20:25:22.638 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+15-03-2020 20:25:22.722 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 78ms. Found 9 repository interfaces.
+15-03-2020 20:25:22.937 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15-03-2020 20:25:23.212 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+15-03-2020 20:25:23.217 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:25:23.218 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+15-03-2020 20:25:23.218 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.27]
+15-03-2020 20:25:23.296 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+15-03-2020 20:25:23.296 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1113 ms
+15-03-2020 20:25:23.442 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+15-03-2020 20:25:23.513 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.4.6.Final}
+15-03-2020 20:25:23.597 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+15-03-2020 20:25:23.656 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+15-03-2020 20:25:23.707 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+15-03-2020 20:25:23.718 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+15-03-2020 20:25:24.355 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15-03-2020 20:25:24.360 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:25:24.442 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15-03-2020 20:25:25.337 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ec13984, org.springframework.security.web.context.SecurityContextPersistenceFilter@30c01c37, org.springframework.security.web.header.HeaderWriterFilter@7de5871d, org.springframework.security.web.csrf.CsrfFilter@6f24ce45, org.springframework.security.web.authentication.logout.LogoutFilter@16b76858, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@41d20f06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25fd6d1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@270f28cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14485747, org.springframework.security.web.session.SessionManagementFilter@714f1a44, org.springframework.security.web.access.ExceptionTranslationFilter@2d913116, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e07b4db]
+15-03-2020 20:25:25.497 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:25:25.722 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:25:25.736 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+15-03-2020 20:25:25.738 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarted - Started CricketfarmApplication in 3.888 seconds (JVM running for 4.437)
+15-03-2020 20:25:30.629 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15-03-2020 20:25:30.629 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+15-03-2020 20:25:30.636 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 7 ms
+15-03-2020 20:25:30.814 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.OrderController.getOrders()
+15-03-2020 20:25:30.818 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.OrderServiceImpl.getOrders()
+15-03-2020 20:25:36.322 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+15-03-2020 20:25:36.324 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:25:36.326 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:25:36.328 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+15-03-2020 20:25:36.330 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+15-03-2020 20:25:41.089 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarting - Starting CricketfarmApplication on DESKTOP-LVRVGJL with PID 6236 (C:\Users\Venous\eclipse-workspace\cricketfarm\target\classes started by Venouš in C:\Users\Venous\eclipse-workspace\cricketfarm)
+15-03-2020 20:25:41.091 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+15-03-2020 20:25:41.613 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+15-03-2020 20:25:41.704 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 85ms. Found 9 repository interfaces.
+15-03-2020 20:25:41.937 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15-03-2020 20:25:42.233 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+15-03-2020 20:25:42.239 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:25:42.240 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+15-03-2020 20:25:42.240 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.27]
+15-03-2020 20:25:42.319 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+15-03-2020 20:25:42.319 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1196 ms
+15-03-2020 20:25:42.471 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+15-03-2020 20:25:42.551 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.4.6.Final}
+15-03-2020 20:25:42.642 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+15-03-2020 20:25:42.704 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+15-03-2020 20:25:42.763 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+15-03-2020 20:25:42.775 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+15-03-2020 20:25:43.472 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15-03-2020 20:25:43.478 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:25:43.554 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15-03-2020 20:25:44.443 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cffec7, org.springframework.security.web.context.SecurityContextPersistenceFilter@65753724, org.springframework.security.web.header.HeaderWriterFilter@23f5008a, org.springframework.security.web.csrf.CsrfFilter@3e8b8f0, org.springframework.security.web.authentication.logout.LogoutFilter@39a7eca5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@55053f81, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34549979, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41582899, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e81617a, org.springframework.security.web.session.SessionManagementFilter@2bb0e277, org.springframework.security.web.access.ExceptionTranslationFilter@77e9dca8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7afb9c93]
+15-03-2020 20:25:44.597 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:25:44.822 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:25:44.838 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+15-03-2020 20:25:44.839 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarted - Started CricketfarmApplication in 4.047 seconds (JVM running for 4.533)
+15-03-2020 20:25:50.405 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15-03-2020 20:25:50.405 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+15-03-2020 20:25:50.413 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 8 ms
+15-03-2020 20:25:50.600 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.ProductController.getProducts()
+15-03-2020 20:25:50.604 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.ProductServiceImpl.getAllProducts()
+15-03-2020 20:26:04.781 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+15-03-2020 20:26:04.783 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:26:04.785 [RMI TCP Connection(3)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:26:04.787 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+15-03-2020 20:26:04.789 [RMI TCP Connection(3)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+15-03-2020 20:26:08.249 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarting - Starting CricketfarmApplication on DESKTOP-LVRVGJL with PID 14884 (C:\Users\Venous\eclipse-workspace\cricketfarm\target\classes started by Venouš in C:\Users\Venous\eclipse-workspace\cricketfarm)
+15-03-2020 20:26:08.252 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+15-03-2020 20:26:08.744 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data repositories in DEFAULT mode.
+15-03-2020 20:26:08.825 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 75ms. Found 9 repository interfaces.
+15-03-2020 20:26:09.038 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+15-03-2020 20:26:09.310 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+15-03-2020 20:26:09.316 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:26:09.316 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+15-03-2020 20:26:09.317 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.27]
+15-03-2020 20:26:09.394 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+15-03-2020 20:26:09.394 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1110 ms
+15-03-2020 20:26:09.585 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+15-03-2020 20:26:09.629 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.4.6.Final}
+15-03-2020 20:26:09.722 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+15-03-2020 20:26:09.786 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+15-03-2020 20:26:09.844 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+15-03-2020 20:26:09.856 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+15-03-2020 20:26:10.507 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15-03-2020 20:26:10.511 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 20:26:10.590 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15-03-2020 20:26:11.452 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60816371, org.springframework.security.web.context.SecurityContextPersistenceFilter@25cde5bb, org.springframework.security.web.header.HeaderWriterFilter@15f2a43f, org.springframework.security.web.csrf.CsrfFilter@74707df8, org.springframework.security.web.authentication.logout.LogoutFilter@44eb2452, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4e6cbdf1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@30d15e4a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@165d1d54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@678586f0, org.springframework.security.web.session.SessionManagementFilter@7bbdb220, org.springframework.security.web.access.ExceptionTranslationFilter@52b32b70, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3739f3c9]
+15-03-2020 20:26:11.604 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+15-03-2020 20:26:11.820 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+15-03-2020 20:26:11.835 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+15-03-2020 20:26:11.837 [main] INFO  c.t.j.c.c.CricketfarmApplication.logStarted - Started CricketfarmApplication in 3.873 seconds (JVM running for 4.34)
+15-03-2020 20:26:32.765 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15-03-2020 20:26:32.766 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+15-03-2020 20:26:32.772 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 6 ms
+15-03-2020 20:26:32.952 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logControllerInfo - Controller call for: List com.taska.java.crickets.cricketfarm.controller.LineItemController.getLineItems()
+15-03-2020 20:26:32.956 [http-nio-8080-exec-1] INFO  c.t.j.c.c.aspect.TracingAspect.logServiceInfo - Service call for: List com.taska.java.crickets.cricketfarm.serviceimpl.LineItemServiceImpl.getLineItems()
+15-03-2020 21:09:54.804 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m44s981ms441µs).
+15-03-2020 21:34:42.456 [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+15-03-2020 21:34:42.459 [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+15-03-2020 21:34:42.461 [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+15-03-2020 21:34:42.464 [RMI TCP Connection(7)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+15-03-2020 21:34:42.467 [RMI TCP Connection(7)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
